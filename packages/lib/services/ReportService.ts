@@ -8,7 +8,7 @@ import DecryptionWorker from './DecryptionWorker';
 import ResourceFetcher from './ResourceFetcher';
 import Resource from '../models/Resource';
 import { _ } from '../locale';
-const { toTitleCase } = require('../string-utils.js');
+const { toTitleCase } = require('../string-utils');
 
 enum CanRetryType {
 	E2EE = 'e2ee',

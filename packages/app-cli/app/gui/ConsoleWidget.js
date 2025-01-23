@@ -1,4 +1,4 @@
-const TextWidget = require('tkwidgets/TextWidget.js');
+const TextWidget = require('tkwidgets/TextWidget');
 
 class ConsoleWidget extends TextWidget {
 	constructor() {

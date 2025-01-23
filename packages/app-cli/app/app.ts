@@ -16,7 +16,7 @@ import RevisionService from '@joplin/lib/services/RevisionService';
 import shim from '@joplin/lib/shim';
 import setupCommand from './setupCommand';
 import { FolderEntity, NoteEntity } from '@joplin/lib/services/database/types';
-const { cliUtils } = require('./cli-utils.js');
+const { cliUtils } = require('./cli-utils');
 const Cache = require('@joplin/lib/Cache');
 const { splitCommandBatch } = require('@joplin/lib/string-utils');
 
@@ -443,7 +443,7 @@ class Application extends BaseApplication {
 			// Otherwise open the GUI
 			const keymap = await this.loadKeymaps();
 
-			const AppGui = require('./app-gui.js');
+			const AppGui = require('./app-gui');
 			this.gui_ = new AppGui(this, this.store(), keymap);
 			this.gui_.setLogger(this.logger());
 			await this.gui_.start();

@@ -11,7 +11,7 @@ import { contentScriptsToRendererRules } from '../plugins/utils/loadContentScrip
 import { basename, friendlySafeFilename, rtrimSlashes, dirname } from '../../path-utils';
 import htmlpack from '@joplin/htmlpack';
 const { themeStyle } = require('../../theme');
-const { escapeHtml } = require('../../string-utils.js');
+const { escapeHtml } = require('../../string-utils');
 import { assetsToHeaders } from '@joplin/renderer';
 import getPluginSettingValue from '../plugins/utils/getPluginSettingValue';
 import { LinkRenderingType } from '@joplin/renderer/MdToHtml';

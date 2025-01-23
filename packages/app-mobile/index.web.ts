@@ -1,7 +1,7 @@
 import { AppRegistry } from 'react-native';
 import Root from './root';
 
-require('./web/rnVectorIconsSetup.js');
+require('./web/rnVectorIconsSetup');
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Necessary until Root doesn't extend `any`
 AppRegistry.registerComponent('Joplin', () => Root as any);

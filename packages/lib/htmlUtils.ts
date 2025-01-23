@@ -1,7 +1,7 @@
-const urlUtils = require('./urlUtils.js');
+const urlUtils = require('./urlUtils');
 const Entities = require('html-entities').AllHtmlEntities;
 const htmlentities = new Entities().encode;
-const { escapeHtml } = require('./string-utils.js');
+const { escapeHtml } = require('./string-utils');
 
 // [\s\S] instead of . for multiline matching
 // https://stackoverflow.com/a/16119722/561309

@@ -4,7 +4,7 @@ import Logger from '@joplin/utils/Logger';
 import { _ } from './locale';
 
 const { stringify } = require('query-string');
-const urlUtils = require('./urlUtils.js');
+const urlUtils = require('./urlUtils');
 const Buffer = require('buffer').Buffer;
 
 const logger = Logger.create('OneDriveApi');

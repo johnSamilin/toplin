@@ -18,7 +18,7 @@ import { getTrashFolder } from '../services/trash';
 import getConflictFolderId from './utils/getConflictFolderId';
 import getTrashFolderId from '../services/trash/getTrashFolderId';
 import { getCollator } from './utils/getCollator';
-const { substrWithEllipsis } = require('../string-utils.js');
+const { substrWithEllipsis } = require('../string-utils');
 
 const logger = Logger.create('models/Folder');
 

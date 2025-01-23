@@ -5,7 +5,7 @@
 const fs = require('fs-extra');
 const Logger = require('@joplin/utils/Logger').default;
 const { dirname } = require('@joplin/lib/path-utils');
-const { DatabaseDriverNode } = require('@joplin/lib/database-driver-node.js');
+const { DatabaseDriverNode } = require('@joplin/lib/database-driver-node');
 const JoplinDatabase = require('@joplin/lib/JoplinDatabase').default;
 const BaseModel = require('@joplin/lib/BaseModel').default;
 const Folder = require('@joplin/lib/models/Folder').default;

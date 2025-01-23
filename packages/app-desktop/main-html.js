@@ -23,7 +23,7 @@ const Revision = require('@joplin/lib/models/Revision').default;
 const Logger = require('@joplin/utils/Logger').default;
 const FsDriverNode = require('@joplin/lib/fs-driver-node').default;
 const shim = require('@joplin/lib/shim').default;
-const { shimInit } = require('@joplin/lib/shim-init-node.js');
+const { shimInit } = require('@joplin/lib/shim-init-node');
 const bridge = require('@electron/remote').require('./bridge').default;
 const EncryptionService = require('@joplin/lib/services/e2ee/EncryptionService').default;
 const FileApiDriverLocal = require('@joplin/lib/file-api-driver-local').default;
@@ -97,7 +97,7 @@ const main = async () => {
 	}
 
 	function appVersion() {
-		const p = require('./packageInfo.js');
+		const p = require('./packageInfo');
 		return p.version;
 	}
 

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { View, Text, StyleSheet, Linking, Animated, Easing } from 'react-native';
 const { connect } = require('react-redux');
 const { _ } = require('@joplin/lib/locale');
-const { themeStyle } = require('../global-style.js');
+const { themeStyle } = require('../global-style');
 import { AppState } from '../../utils/types';
 import { generateApplicationConfirmUrl, reducer, checkIfLoginWasSuccessful, defaultState } from '@joplin/lib/services/joplinCloudUtils';
 import { uuidgen } from '@joplin/lib/uuid';

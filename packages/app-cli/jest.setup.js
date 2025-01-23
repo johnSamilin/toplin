@@ -1,5 +1,5 @@
-const { afterEachCleanUp } = require('@joplin/lib/testing/test-utils.js');
-const { shimInit } = require('@joplin/lib/shim-init-node.js');
+const { afterEachCleanUp } = require('@joplin/lib/testing/test-utils');
+const { shimInit } = require('@joplin/lib/shim-init-node');
 const shim = require('@joplin/lib/shim').default;
 const sharp = require('sharp');
 const nodeSqlite = require('sqlite3');

@@ -1,4 +1,4 @@
-import { _ } from './locale.js';
+import { _ } from './locale';
 import BaseSyncTarget from './BaseSyncTarget';
 import { FileApi } from './file-api';
 

@@ -1,5 +1,5 @@
-const { afterEachCleanUp } = require('./testing/test-utils.js');
-const { shimInit } = require('./shim-init-node.js');
+const { afterEachCleanUp } = require('./testing/test-utils');
+const { shimInit } = require('./shim-init-node');
 const sharp = require('sharp');
 const nodeSqlite = require('sqlite3');
 const pdfJs = require('pdfjs-dist');

@@ -9,7 +9,7 @@ const Setting = require('@joplin/lib/models/Setting').default;
 const reducer = require('@joplin/lib/reducer').default;
 const { defaultState } = require('@joplin/lib/reducer');
 const { splitCommandString } = require('@joplin/utils');
-const { reg } = require('@joplin/lib/registry.js');
+const { reg } = require('@joplin/lib/registry');
 const { _ } = require('@joplin/lib/locale');
 const shim = require('@joplin/lib/shim').default;
 const Entities = require('html-entities').AllHtmlEntities;
@@ -17,24 +17,24 @@ const htmlentities = new Entities().encode;
 
 const chalk = require('chalk');
 const tk = require('terminal-kit');
-const TermWrapper = require('tkwidgets/framework/TermWrapper.js');
-const Renderer = require('tkwidgets/framework/Renderer.js');
+const TermWrapper = require('tkwidgets/framework/TermWrapper');
+const Renderer = require('tkwidgets/framework/Renderer');
 const DecryptionWorker = require('@joplin/lib/services/DecryptionWorker').default;
 
-const BaseWidget = require('tkwidgets/BaseWidget.js');
-const TextWidget = require('tkwidgets/TextWidget.js');
-const HLayoutWidget = require('tkwidgets/HLayoutWidget.js');
-const VLayoutWidget = require('tkwidgets/VLayoutWidget.js');
-const ReduxRootWidget = require('tkwidgets/ReduxRootWidget.js');
-const WindowWidget = require('tkwidgets/WindowWidget.js');
+const BaseWidget = require('tkwidgets/BaseWidget');
+const TextWidget = require('tkwidgets/TextWidget');
+const HLayoutWidget = require('tkwidgets/HLayoutWidget');
+const VLayoutWidget = require('tkwidgets/VLayoutWidget');
+const ReduxRootWidget = require('tkwidgets/ReduxRootWidget');
+const WindowWidget = require('tkwidgets/WindowWidget');
 
-const NoteWidget = require('./gui/NoteWidget.js');
-const ResourceServer = require('./ResourceServer.js');
-const NoteMetadataWidget = require('./gui/NoteMetadataWidget.js');
+const NoteWidget = require('./gui/NoteWidget');
+const ResourceServer = require('./ResourceServer');
+const NoteMetadataWidget = require('./gui/NoteMetadataWidget');
 const FolderListWidget = require('./gui/FolderListWidget').default;
-const NoteListWidget = require('./gui/NoteListWidget.js');
+const NoteListWidget = require('./gui/NoteListWidget');
 const StatusBarWidget = require('./gui/StatusBarWidget').default;
-const ConsoleWidget = require('./gui/ConsoleWidget.js');
+const ConsoleWidget = require('./gui/ConsoleWidget');
 const LinkSelector = require('./LinkSelector.js').default;
 
 

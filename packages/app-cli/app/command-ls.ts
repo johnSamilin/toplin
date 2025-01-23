@@ -8,7 +8,7 @@ import Note from '@joplin/lib/models/Note';
 const { sprintf } = require('sprintf-js');
 import time from '@joplin/lib/time';
 import { NoteEntity } from '@joplin/lib/services/database/types';
-const { cliUtils } = require('./cli-utils.js');
+const { cliUtils } = require('./cli-utils');
 
 class Command extends BaseCommand {
 	public override usage() {

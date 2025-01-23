@@ -4,13 +4,13 @@
 const os = require('os');
 const time = require('@joplin/lib/time').default;
 const { filename } = require('@joplin/lib/path-utils');
-const { fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('@joplin/lib/testing/test-utils.js');
+const { fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('@joplin/lib/testing/test-utils');
 const Folder = require('@joplin/lib/models/Folder').default;
 const Note = require('@joplin/lib/models/Note').default;
 const BaseModel = require('@joplin/lib/BaseModel').default;
 const shim = require('@joplin/lib/shim').default;
 const HtmlToHtml = require('@joplin/renderer/HtmlToHtml').default;
-const { enexXmlToMd } = require('@joplin/lib/import-enex-md-gen.js');
+const { enexXmlToMd } = require('@joplin/lib/import-enex-md-gen');
 
 describe('HtmlToHtml', () => {
 

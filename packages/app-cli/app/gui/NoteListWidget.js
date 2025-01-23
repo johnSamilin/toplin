@@ -1,5 +1,5 @@
 const Note = require('@joplin/lib/models/Note').default;
-const ListWidget = require('tkwidgets/ListWidget.js');
+const ListWidget = require('tkwidgets/ListWidget');
 
 class NoteListWidget extends ListWidget {
 	constructor() {

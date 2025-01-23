@@ -19,7 +19,7 @@ import markupLanguageUtils from '../../../markupLanguageUtils';
 import * as mimeUtils from '../../../mime-utils';
 const md5 = require('md5');
 import HtmlToMd from '../../../HtmlToMd';
-const urlUtils = require('../../../urlUtils.js');
+import * as urlUtils from '../../../urlUtils';
 import * as ArrayUtils from '../../../ArrayUtils';
 import Logger from '@joplin/utils/Logger';
 const { mimeTypeFromHeaders } = require('../../../net-utils');

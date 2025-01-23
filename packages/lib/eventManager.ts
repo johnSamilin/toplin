@@ -19,6 +19,7 @@ export enum EventName {
 	NoteContentChange = 'noteContentChange',
 	OcrServiceResourcesProcessed = 'ocrServiceResourcesProcessed',
 	NoteResourceIndexed = 'noteResourceIndexed',
+	ToggleFullscreen = 'togglefullscreen',
 }
 
 interface ItemChangeEvent {
@@ -71,6 +72,7 @@ type EventArgs = {
 	[EventName.NoteContentChange]: [NoteContentChangeEvent];
 	[EventName.OcrServiceResourcesProcessed]: [];
 	[EventName.NoteResourceIndexed]: [];
+	[EventName.ToggleFullscreen]: [],
 };
 
 type EventListenerCallbacks = {

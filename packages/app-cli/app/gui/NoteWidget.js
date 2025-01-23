@@ -1,5 +1,5 @@
 const Note = require('@joplin/lib/models/Note').default;
-const TextWidget = require('tkwidgets/TextWidget.js');
+const TextWidget = require('tkwidgets/TextWidget');
 const { _ } = require('@joplin/lib/locale');
 
 class NoteWidget extends TextWidget {

@@ -1,7 +1,7 @@
 import shimInitShared from './shimInitShared';
 
 import shim from '@joplin/lib/shim';
-const { GeolocationReact } = require('../geolocation-react.js');
+const { GeolocationReact } = require('../geolocation-react');
 import RNFetchBlob from 'rn-fetch-blob';
 import { generateSecureRandom } from 'react-native-securerandom';
 import FsDriverRN from '../fs-driver/fs-driver-rn';

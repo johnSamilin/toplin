@@ -1,5 +1,5 @@
 import { htmlentities } from '@joplin/utils/html';
-const Mark = require('mark.js/dist/mark.min.js');
+const Mark = require('mark.js/dist/mark.min');
 const markJsUtils = require('@joplin/lib/markJsUtils');
 const { replaceRegexDiacritics, pregQuote } = require('@joplin/lib/string-utils');
 

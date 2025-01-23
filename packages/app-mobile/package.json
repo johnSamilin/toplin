@@ -89,7 +89,7 @@
     "@babel/core": "7.24.7",
     "@babel/plugin-transform-export-namespace-from": "7.24.7",
     "@babel/preset-env": "7.24.7",
-    "@babel/runtime": "7.24.7",
+    "@babel/runtime": "^7.26.0",
     "@joplin/tools": "~3.2",
     "@js-draw/material-icons": "1.26.0",
     "@react-native/babel-preset": "0.74.86",

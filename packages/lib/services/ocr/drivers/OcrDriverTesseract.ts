@@ -19,6 +19,7 @@ interface WorkerWrapper {
 
 let workerId_ = 1;
 
+//@ts-ignore
 const formatTesseractBoundingBox = (boundingBox: Tesseract.Bbox): RecognizeResultBoundingBox => {
 	return [boundingBox.x0, boundingBox.x1, boundingBox.y0, boundingBox.y1];
 };
@@ -192,6 +193,7 @@ export default class OcrDriverTesseract extends OcrDriverBase {
 					// still be correct if the line as a whole is well recognised.
 					if (line.confidence < minConfidence) continue;
 
+					//@ts-ignore
 					const goodWords: RecognizeResultWord[] = line.words.map(w => {
 						const output: RecognizeResultWord = {
 							t: w.text,

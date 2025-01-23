@@ -1,5 +1,5 @@
 const time = require('../time').default;
-const { setupDatabaseAndSynchronizer, switchClient } = require('../testing/test-utils.js');
+const { setupDatabaseAndSynchronizer, switchClient } = require('../testing/test-utils');
 const Folder = require('../models/Folder').default;
 const Note = require('../models/Note').default;
 

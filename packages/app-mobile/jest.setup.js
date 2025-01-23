@@ -1,8 +1,8 @@
 /* eslint-disable jest/require-top-level-describe */
 
-const { afterEachCleanUp, afterAllCleanUp } = require('@joplin/lib/testing/test-utils.js');
+const { afterEachCleanUp, afterAllCleanUp } = require('@joplin/lib/testing/test-utils');
 const shim = require('@joplin/lib/shim').default;
-const { shimInit } = require('@joplin/lib/shim-init-node.js');
+const { shimInit } = require('@joplin/lib/shim-init-node');
 const injectedJs = require('./utils/injectedJs.js').default;
 const { mkdir, rm } = require('fs-extra');
 const path = require('path');
@@ -52,7 +52,7 @@ jest.doMock('react-native-version-info', () => {
 
 // react-native-webview expects native iOS/Android code so needs to be mocked.
 jest.mock('./components/ExtendedWebView', () => {
-	return require('./components/ExtendedWebView/index.jest.js');
+	return require('./components/ExtendedWebView/index.jest');
 });
 
 jest.mock('./components/CameraView/Camera', () => {

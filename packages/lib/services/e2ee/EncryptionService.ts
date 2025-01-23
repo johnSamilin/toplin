@@ -6,7 +6,7 @@ import MasterKey from '../../models/MasterKey';
 import BaseItem from '../../models/BaseItem';
 import JoplinError from '../../JoplinError';
 import { getActiveMasterKeyId, setActiveMasterKeyId } from '../synchronizer/syncInfoUtils';
-const { padLeft } = require('../../string-utils.js');
+const { padLeft } = require('../../string-utils');
 
 const logger = Logger.create('EncryptionService');
 

@@ -78,7 +78,7 @@ const theme = {
 			@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-			#rendered-md {
+			#rendered-md, .cm-content {
 				max-width: 700px;
 				margin: 0 auto;
 				padding: 0 1.5rem;
@@ -86,58 +86,61 @@ const theme = {
 				font-family: PT Serif, Martel, serif;
 				line-height: 1.75em
 			}
+			.cm-content {
+				padding: 0;
+			}
 
-			#rendered-md .header-1,
-			#rendered-md .header-2,
-			#rendered-md .header-3,
-			#rendered-md .header-4,
-			#rendered-md .header-5,
-			#rendered-md .header-6 {
+			#rendered-md .header-1, .cm-h1,
+			#rendered-md .header-2, .cm-h2,
+			#rendered-md .header-3, .cm-h3,
+			#rendered-md .header-4, .cm-h4,
+			#rendered-md .header-5, .cm-h5,
+			#rendered-md .header-6, .cm-h6 {
 				margin: 1em 0;
 				font-family: Spectral, serif;
 				line-height: 1.25em;
 				border-bottom: none;
 			}
 
-			#rendered-md h1 {
+			#rendered-md h1, .cm-h1 {
 				font-weight: 800;
 				font-size: 3em
 			}
 
-			#rendered-md h2 {
+			#rendered-md h2, .cm-h2 {
 				font-weight: 400;
 				font-size: 1.8em
 			}
 
-			#rendered-md h3 {
+			#rendered-md h3, .cm-h3 {
 				font-weight: 600;
 				font-size: 1.3em
 			}
 
-			#rendered-md h4 {
+			#rendered-md h4, .cm-h4 {
 				font-weight: 600;
 				font-size: 1.2em
 			}
 
-			#rendered-md h5 {
+			#rendered-md h5, .cm-h5 {
 				font-weight: 600;
 				font-size: 1.1em
 			}
 
-			#rendered-md h6 {
+			#rendered-md h6, .cm-h6 {
 				font-weight: 600;
 				font-size: 1em
 			}
 
-			#rendered-md h3,
-			#rendered-md h4,
-			#rendered-md h5,
-			#rendered-md h6 {
+			#rendered-md h3, .cm-h3,
+			#rendered-md h4, .cm-h4,
+			#rendered-md h5, .cm-h5,
+			#rendered-md h6, .cm-h6 {
 				text-transform: uppercase
 			}
 
-			#rendered-md li p,
-			#rendered-md p,
+			#rendered-md li p, li .cm-line,
+			#rendered-md p, .cm-line,
 			#rendered-md pre {
 				margin-bottom: 0
 			}
@@ -170,7 +173,7 @@ const theme = {
 				padding: 0
 			}
 
-			#rendered-md blockquote {
+			#rendered-md blockquote, .cm-blockQuote {
 				margin: 2.5em 0;
 				padding-left: 2rem;
 				padding-right: 2rem;
@@ -196,7 +199,19 @@ const theme = {
 			#rendered-md b,
 			#rendered-md strong {
 				font-weight: 800
-			}`,
+			}
+			
+
+			.tok-meta, .tok-url {
+				display: none;
+			}
+			.cm-listItem > .tok-meta {
+				display: inline-block;
+			}
+			.cm-headerLine {
+				padding-left: 0;
+			}
+			`,
 };
 exports.default = theme;
 //# sourceMappingURL=toplin.js.map

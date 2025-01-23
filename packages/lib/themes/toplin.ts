@@ -74,6 +74,15 @@ const theme: Theme = {
         borderBottomWidth: '0 important',
         lineHeight: '1.25rem',
     },
+    headerAndTitle: {
+        position: 'relative',
+    },
+    noteHeader: {
+        position: 'absolute',
+        zIndex: 5,
+        right: 0,
+        top: '20%',
+    },
     extraRawCss: `@import url('https://fonts.googleapis.com/css?family=Spectral|Spectral+SC');
 			@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');

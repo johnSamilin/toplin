@@ -29,6 +29,7 @@ const builtInCommandNames = [
 	'setTags',
 	EditorCommandType.ToggleSearch,
 	'hideKeyboard',
+	'togglefullscreen'
 ];
 
 

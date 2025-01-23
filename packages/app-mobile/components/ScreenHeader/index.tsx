@@ -25,6 +25,8 @@ import WebBetaButton from './WebBetaButton';
 
 import Menu, { MenuOptionType } from './Menu';
 import shim from '@joplin/lib/shim';
+import DeviceInfo from 'react-native-device-info';
+import Setting from '@joplin/lib/models/Setting';
 export { MenuOptionType };
 
 // Rather than applying a padding to the whole bar, it is applied to each
@@ -32,6 +34,7 @@ export { MenuOptionType };
 // are widder and to give more room to the picker component which has a larger
 // default height.
 const PADDING_V = 10;
+const isTablet = true;// DeviceInfo.isTablet();
 
 type OnPressCallback=()=> void;
 
@@ -103,6 +106,11 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 				backgroundColor: theme.backgroundColor2,
 				shadowColor: '#000000',
 				elevation: 5,
+				position: 'relative',
+			},
+			titleWrapper: {
+				flexDirection: 'row',
+				alignItems: 'center',
 			},
 			sideMenuButton: {
 				flex: 1,
@@ -151,7 +159,7 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 				fontSize: 30,
 				paddingLeft: 10,
 				paddingRight: theme.marginRight,
-				color: theme.color2,
+				color: theme.colorBright2,
 				fontWeight: 'bold',
 			},
 			titleText: {
@@ -188,6 +196,7 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 	}
 
 	private async backButton_press() {
+		this.props.dispatch({ type: 'SET_EDIT_MODE', payload: false });
 		if (this.props.noteSelectionEnabled) {
 			this.props.dispatch({ type: 'NOTE_SELECTION_END' });
 		} else {
@@ -609,7 +618,6 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 		// space while in use, we allow certain buttons to be hidden.
 		const hideableRightComponents = <>
 			{pluginPanelsComp}
-			{betaIconComp}
 		</>;
 
 		const titleComp = createTitleComponent(hideableRightComponents);
@@ -633,7 +641,7 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 
 		return (
 			<View style={this.styles().container}>
-				<View style={{ flexDirection: 'row', alignItems: 'center' }}>
+				<View style={this.styles().titleWrapper}>
 					{sideMenuComp}
 					{backButtonComp}
 					{renderUndoButton()}
@@ -646,13 +654,15 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 						this.props.saveButtonDisabled === true,
 						this.props.showSaveButton === true,
 					)}
-					{titleComp}
-					{selectAllButtonComp}
-					{searchButtonComp}
-					{deleteButtonComp}
-					{restoreButtonComp}
-					{duplicateButtonComp}
-					{sortButtonComp}
+					{!(isTablet && this.props.themeId === Setting.THEME_TOPLIN) && <>
+						{titleComp}
+						{selectAllButtonComp}
+						{searchButtonComp}
+						{deleteButtonComp}
+						{restoreButtonComp}
+						{duplicateButtonComp}
+						{sortButtonComp}
+					</>}
 					{menuComp}
 				</View>
 				<WarningBanner

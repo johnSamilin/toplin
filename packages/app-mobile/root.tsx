@@ -328,6 +328,9 @@ const appReducer = (state = appDefaultState, action: any) => {
 				}
 
 				newState = { ...state, editMode: false };
+				if (isTablet) {
+					newState.showSideMenu = action.routeName !== 'Config';
+				}
 
 				newState.selectedNoteHash = '';
 
@@ -1132,7 +1135,7 @@ class AppComponent extends React.Component {
 			return true;
 		}
 
-		if (this.props.showSideMenu) {
+		if (this.props.showSideMenu && !isTablet) {
 			this.props.dispatch({ type: 'SIDE_MENU_CLOSE' });
 			return true;
 		}

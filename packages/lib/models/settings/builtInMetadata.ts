@@ -8,7 +8,7 @@ import { AppType, SettingItemSubType, SettingItemType, SettingStorage, SyncStart
 import { defaultListColumns } from '../../services/plugins/api/noteListType';
 import type { PluginSettings } from '../../services/plugins/PluginService';
 const ObjectUtils = require('../../ObjectUtils');
-const { toTitleCase } = require('../../string-utils.js');
+const { toTitleCase } = require('../../string-utils');
 
 const customCssFilePath = (Setting: typeof SettingType, filename: string): string => {
 	return `${Setting.value('rootProfileDir')}/${filename}`;
@@ -53,6 +53,7 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 		output[Setting.THEME_NORD] = _('Nord');
 		output[Setting.THEME_ARITIM_DARK] = _('Aritim Dark');
 		output[Setting.THEME_OLED_DARK] = _('OLED Dark');
+		output[Setting.THEME_TOPLIN] = _('Toplin');
 		return output;
 	};
 

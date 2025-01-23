@@ -63,9 +63,11 @@ import { DialogContext, DialogControl } from '../../DialogManager';
 import { CommandRuntimeProps, EditorMode, PickerResponse } from './types';
 import commands from './commands';
 import { AttachFileAction, AttachFileOptions } from './commands/attachFile';
+import DeviceInfo from 'react-native-device-info';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Old code before rule was applied
 const emptyArray: any[] = [];
+const isTablet = true;// DeviceInfo.isTablet();
 
 const logger = Logger.create('screens/Note');
 
@@ -426,6 +428,10 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 				flex: 1,
 				backgroundColor: theme.backgroundColor,
 			},
+			headerAndTitle: {
+				...theme.headerAndTitle,
+			},
+			noteHeader: theme.noteHeader,
 			bodyTextInput: {
 				flex: 1,
 				paddingLeft: theme.marginLeft,
@@ -1598,8 +1604,8 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 			return <VoiceTypingDialog locale={currentLocale()} onText={this.voiceTypingDialog_onText} onDismiss={this.voiceTypingDialog_onDismiss}/>;
 		};
 
-		return (
-			<View style={this.rootStyle(this.props.themeId).root}>
+		const headerAndTitleComp = <>
+			<View style={isTablet ? this.styles().noteHeader : {}}>
 				<ScreenHeader
 					folderPickerOptions={this.folderPickerOptions()}
 					menuOptions={this.menuOptions()}
@@ -1615,7 +1621,13 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 					onRedoButtonPress={this.screenHeader_redoButtonPress}
 					title={getDisplayParentTitle(this.state.note, this.state.folder)}
 				/>
-				{titleComp}
+			</View>
+			{titleComp}
+		</>;
+
+		return (
+			<View style={this.rootStyle(this.props.themeId).root}>
+				{isTablet ? <View style={this.styles().headerAndTitle}>{headerAndTitleComp}</View> : headerAndTitleComp}
 				{bodyComponent}
 				{renderActionButton()}
 				{renderVoiceTypingDialog()}

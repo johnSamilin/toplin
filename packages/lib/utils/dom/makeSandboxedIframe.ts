@@ -1,3 +1,4 @@
+import eventManager, { EventName } from "../../eventManager";
 
 interface Options {
 	bodyHtml: string;
@@ -22,6 +23,18 @@ const makeSandboxedIframe = ({ bodyHtml, headHtml, scripts, permissions = 'allow
 			scripts,
 		}, '*');
 	}, { once: true });
+
+	const toggleFullscreen = async () => {
+		const doc = iframe.querySelector('document');
+		console.log('toggle fullscreen');
+		try {
+			await iframe.requestFullscreen();
+		} catch(er) {
+			// we're okay with errors here
+		}
+	}
+
+	eventManager.on(EventName.ToggleFullscreen, toggleFullscreen);
 
 	iframe.srcdoc = `
 		<!DOCTYPE html>

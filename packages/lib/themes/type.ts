@@ -71,4 +71,6 @@ export interface Theme {
 	useNormalization: boolean;
 	extraRawCss?: any;
 	titleTextInput?: any;
+	headerAndTitle?: any;
+	noteHeader?: any;
 }

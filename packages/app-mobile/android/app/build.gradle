@@ -74,19 +74,22 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "net.cozic.joplin"
+    namespace "net.johnsamilin.toplin"
     defaultConfig {
-        applicationId "net.cozic.joplin"
+        applicationId "net.johnsamilin.toplin"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-		versionCode 2097763
-		versionName "3.2.7"
+		versionCode 2097766
+		versionName "3.2.10"
 		ndk {
 			abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
 		}
 
         // Needed to fix: The number of method references in a .dex file cannot exceed 64K
         multiDexEnabled true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.10'
     }
     signingConfigs {
         debug {

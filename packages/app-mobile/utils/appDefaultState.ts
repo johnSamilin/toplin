@@ -1,5 +1,6 @@
 import { defaultState } from '@joplin/lib/reducer';
 import { AppState } from './types';
+import DeviceInfo from 'react-native-device-info';
 
 export const DEFAULT_ROUTE = {
 	type: 'NAV_GO',
@@ -7,7 +8,7 @@ export const DEFAULT_ROUTE = {
 	smartFilterId: 'c3176726992c11e9ac940492261af972',
 };
 
-const isTablet = true;//DeviceInfo.isTablet();
+const isTablet = DeviceInfo.isTablet();
 
 const appDefaultState: AppState = {
 	smartFilterId: undefined,

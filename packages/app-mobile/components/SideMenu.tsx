@@ -7,6 +7,7 @@ import { _ } from '@joplin/lib/locale';
 import useReduceMotionEnabled from '../utils/hooks/useReduceMotionEnabled';
 import { themeStyle } from './global-style';
 import { AppState } from '../utils/types';
+import DeviceInfo from 'react-native-device-info';
 
 export enum SideMenuPosition {
 	Left = 'left',
@@ -14,7 +15,7 @@ export enum SideMenuPosition {
 }
 
 export type OnChangeCallback = (isOpen: boolean)=> void;
-const isTablet = true;// DeviceInfo.isTablet();
+const isTablet = DeviceInfo.isTablet();
 
 interface Props {
 	themeId: number;

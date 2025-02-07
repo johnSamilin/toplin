@@ -67,7 +67,7 @@ import DeviceInfo from 'react-native-device-info';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Old code before rule was applied
 const emptyArray: any[] = [];
-const isTablet = true;// DeviceInfo.isTablet();
+const isTablet = DeviceInfo.isTablet();
 
 const logger = Logger.create('screens/Note');
 

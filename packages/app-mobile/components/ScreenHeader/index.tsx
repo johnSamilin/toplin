@@ -25,8 +25,8 @@ import WebBetaButton from './WebBetaButton';
 
 import Menu, { MenuOptionType } from './Menu';
 import shim from '@joplin/lib/shim';
-import DeviceInfo from 'react-native-device-info';
 import Setting from '@joplin/lib/models/Setting';
+import DeviceInfo from 'react-native-device-info';
 export { MenuOptionType };
 
 // Rather than applying a padding to the whole bar, it is applied to each
@@ -34,7 +34,7 @@ export { MenuOptionType };
 // are widder and to give more room to the picker component which has a larger
 // default height.
 const PADDING_V = 10;
-const isTablet = true;// DeviceInfo.isTablet();
+const isTablet = DeviceInfo.isTablet();
 
 type OnPressCallback=()=> void;
 
@@ -607,6 +607,7 @@ class ScreenHeaderComponent extends PureComponent<ScreenHeaderProps, ScreenHeade
 		const backButtonComp = !showBackButton ? null : backButton(this.styles(), () => this.backButton_press(), backButtonDisabled);
 		const pluginPanelsComp = pluginPanelToggleButton(this.styles(), () => this.pluginPanelToggleButton_press());
 		const betaIconComp = betaIconButton();
+		betaIconComp;
 		const selectAllButtonComp = !showSelectAllButton ? null : selectAllButton(this.styles(), () => this.selectAllButton_press());
 		const searchButtonComp = !showSearchButton ? null : searchButton(this.styles(), () => this.searchButton_press());
 		const deleteButtonComp = !selectedFolderInTrash && this.props.noteSelectionEnabled ? deleteButton(this.styles(), () => this.deleteButton_press(), headerItemDisabled) : null;

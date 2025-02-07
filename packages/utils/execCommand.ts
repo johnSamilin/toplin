@@ -39,6 +39,7 @@ export default async (command: string | string[], options: ExecCommandOptions | 
 	const args: string[] = typeof command === 'string' ? splitCommandString(command) : command as string[];
 	const executableName = args[0];
 	args.splice(0, 1);
+	// @ts-ignore
 	const promise = execa(executableName, args, { env: options.env });
 	if (options.showStdout && promise.stdout) promise.stdout.pipe(process.stdout);
 	if (options.showStderr && promise.stderr) promise.stderr.pipe(process.stderr);

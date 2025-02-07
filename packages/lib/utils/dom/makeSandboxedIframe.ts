@@ -25,7 +25,7 @@ const makeSandboxedIframe = ({ bodyHtml, headHtml, scripts, permissions = 'allow
 	}, { once: true });
 
 	const toggleFullscreen = async () => {
-		const doc = iframe.querySelector('document');
+		// const doc = iframe.querySelector('document');
 		console.log('toggle fullscreen');
 		try {
 			await iframe.requestFullscreen();

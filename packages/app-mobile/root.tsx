@@ -139,9 +139,10 @@ import DialogManager from './components/DialogManager';
 import lockToSingleInstance from './utils/lockToSingleInstance';
 import { AppState } from './utils/types';
 import { getDisplayParentId } from '@joplin/lib/services/trash';
+import DeviceInfo from 'react-native-device-info';
 
 const logger = Logger.create('root');
-const isTablet = true;// DeviceInfo.isTablet();
+const isTablet = DeviceInfo.isTablet();
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Old code before rule was applied
 let storeDispatch: any = function(_action: any) {};

@@ -8,7 +8,7 @@ exports.declaration = {
     label: () => (0, locale_1._)('Toggle fullscreen'),
     iconName: 'material fullscreen',
 };
-const runtime = (props) => {
+const runtime = () => {
     return {
         execute: async (_context) => {
             eventManager_1.default.emit(eventManager_1.EventName.ToggleFullscreen);

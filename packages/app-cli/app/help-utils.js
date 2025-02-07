@@ -1,4 +1,4 @@
-const { wrap } = require('@joplin/lib/string-utils');
+const { wrap } = require('@joplin/lib/string-utils.js');
 const Setting = require('@joplin/lib/models/Setting').default;
 const { _ } = require('@joplin/lib/locale');
 

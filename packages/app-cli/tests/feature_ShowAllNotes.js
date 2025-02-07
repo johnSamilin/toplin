@@ -7,13 +7,13 @@
 // remove them.
 // ====================== IMPORTANT ============================================
 
-const { setupDatabaseAndSynchronizer, switchClient, id, ids, sortedIds, at, createNTestFolders, createNTestNotes, createNTestTags, TestApp } = require('@joplin/lib/testing/test-utils');
+const { setupDatabaseAndSynchronizer, switchClient, id, ids, sortedIds, at, createNTestFolders, createNTestNotes, createNTestTags, TestApp } = require('@joplin/lib/testing/test-utils.js');
 const Setting = require('@joplin/lib/models/Setting').default;
 const Folder = require('@joplin/lib/models/Folder').default;
 const Note = require('@joplin/lib/models/Note').default;
 const Tag = require('@joplin/lib/models/Tag').default;
 const time = require('@joplin/lib/time').default;
-const { ALL_NOTES_FILTER_ID } = require('@joplin/lib/reserved-ids');
+const { ALL_NOTES_FILTER_ID } = require('@joplin/lib/reserved-ids.js');
 
 // The integration tests are to test the integration of the core system,
 // comprising the base application with middleware, reducer and models in

@@ -1,7 +1,7 @@
 import FileApiDriverJoplinServer from './file-api-driver-joplinServer';
 import Setting from './models/Setting';
 import Synchronizer from './Synchronizer';
-import { _ } from './locale';
+import { _ } from './locale.js';
 import JoplinServerApi from './JoplinServerApi';
 import BaseSyncTarget from './BaseSyncTarget';
 import { FileApi } from './file-api';

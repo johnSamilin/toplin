@@ -32,7 +32,7 @@ import Logger from '@joplin/utils/Logger';
 
 const logger = Logger.create('MenuBar');
 
-const packageInfo: PackageInfo = require('../packageInfo');
+const packageInfo: PackageInfo = require('../packageInfo.js');
 const { clipboard } = require('electron');
 const Menu = bridge().Menu;
 

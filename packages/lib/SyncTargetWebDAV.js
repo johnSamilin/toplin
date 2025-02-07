@@ -1,7 +1,7 @@
 const BaseSyncTarget = require('./BaseSyncTarget').default;
 const { _ } = require('./locale');
 const Setting = require('./models/Setting').default;
-const { FileApi } = require('./file-api');
+const { FileApi } = require('./file-api.js');
 const Synchronizer = require('./Synchronizer').default;
 const WebDavApi = require('./WebDavApi');
 const { FileApiDriverWebDav } = require('./file-api-driver-webdav');

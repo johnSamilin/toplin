@@ -7,7 +7,7 @@ import * as ArrayUtils from '@joplin/lib/ArrayUtils';
 import { CheckForUpdateOptions, extractVersionInfo, GitHubRelease } from './utils/checkForUpdatesUtils';
 import { PackageInfo } from '@joplin/lib/versionInfo';
 import { compareVersions } from 'compare-versions';
-const packageInfo: PackageInfo = require('./packageInfo');
+const packageInfo: PackageInfo = require('./packageInfo.js');
 
 const logger = Logger.create('checkForUpdates');
 

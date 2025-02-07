@@ -1,4 +1,4 @@
-const { setupDatabaseAndSynchronizer, db, switchClient } = require('../testing/test-utils');
+const { setupDatabaseAndSynchronizer, db, switchClient } = require('../testing/test-utils.js');
 const KvStore = require('../services/KvStore').default;
 
 function setupStore() {

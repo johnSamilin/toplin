@@ -38,7 +38,7 @@ const resourceLoaderConfiguration = {
 	type: 'asset/resource',
 };
 
-const emptyLibraryMock = path.resolve(__dirname, 'mocks/empty');
+const emptyLibraryMock = path.resolve(__dirname, 'mocks/empty.js');
 
 module.exports = {
 	target: 'web',
@@ -81,7 +81,6 @@ module.exports = {
 			// See https://joshuatz.com/posts/2021/strongly-typed-service-workers/.
 			// See https://github.com/microsoft/TypeScript/issues/37053
 			'serviceworker': emptyLibraryMock,
-			'@lib': path.resolve(__dirname, 'packages', 'lib')
 		},
 		// Prefers .web.js, .web.ts, etc. imports to other imports.
 		extensions: [

@@ -1,7 +1,7 @@
 'use strict';
 
 
-const { checkThrow } = require('./testing/test-utils');
+const { checkThrow } = require('./testing/test-utils.js');
 const eventManager = require('./eventManager').default;
 
 describe('eventManager', () => {

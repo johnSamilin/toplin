@@ -5,7 +5,7 @@ import Setting from '@joplin/lib/models/Setting';
 import { _ } from '@joplin/lib/locale';
 import { FolderEntity } from '@joplin/lib/services/database/types';
 import { getDisplayParentId, getTrashFolderId } from '@joplin/lib/services/trash';
-const ListWidget = require('tkwidgets/ListWidget');
+const ListWidget = require('tkwidgets/ListWidget.js');
 
 export default class FolderListWidget extends ListWidget {
 

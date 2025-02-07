@@ -1,4 +1,4 @@
-const mimeUtils = require('./mime-utils');
+const mimeUtils = require('./mime-utils.js');
 
 describe('mimeUtils', () => {
 

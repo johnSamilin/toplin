@@ -13,7 +13,7 @@ import shim from '@joplin/lib/shim';
 import { closestSupportedLocale, defaultLocale, setLocale } from '@joplin/lib/locale';
 
 const shimInitShared = () => {
-	shim.sjclModule = require('@joplin/lib/vendor/sjcl-rn');
+	shim.sjclModule = require('@joplin/lib/vendor/sjcl-rn.js');
 
 	shim.stringByteLength = function(string) {
 		return Buffer.byteLength(string, 'utf-8');

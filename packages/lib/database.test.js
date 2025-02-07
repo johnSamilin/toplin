@@ -1,4 +1,4 @@
-const { setupDatabaseAndSynchronizer, switchClient } = require('./testing/test-utils');
+const { setupDatabaseAndSynchronizer, switchClient } = require('./testing/test-utils.js');
 const BaseModel = require('./BaseModel').default;
 
 describe('database', () => {

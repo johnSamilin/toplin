@@ -3,7 +3,7 @@ import { ResourceEntity } from './services/database/types';
 import { htmlentities } from '@joplin/utils/html';
 const stringPadding = require('string-padding');
 const stringToStream = require('string-to-stream');
-const resourceUtils = require('./resourceUtils');
+const resourceUtils = require('./resourceUtils.js');
 const cssParser = require('@adobe/css-tools');
 
 const BLOCK_OPEN = '[[BLOCK_OPEN]]';

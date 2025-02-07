@@ -138,7 +138,7 @@ function shimInit(options: ShimInitOptions = null) {
 	shim.FileApiDriverLocal = FileApiDriverLocal;
 	shim.Geolocation = GeolocationNode;
 	shim.FormData = require('form-data');
-	shim.sjclModule = require('./vendor/sjcl');
+	shim.sjclModule = require('./vendor/sjcl.js');
 	shim.crypto = crypto;
 	shim.electronBridge_ = options.electronBridge;
 

@@ -1,6 +1,6 @@
 import { useCallback, useContext } from 'react';
 
-const { _ } = require('@joplin/lib/locale');
+const { _ } = require('@joplin/lib/locale.js');
 import Resource from '@joplin/lib/models/Resource';
 import { copyToCache } from '../../../utils/ShareUtils';
 import isEditableResource from '../../NoteEditor/ImageEditor/isEditableResource';

@@ -1,5 +1,5 @@
 
-const { tempFilePath } = require('../testing/test-utils');
+const { tempFilePath } = require('../testing/test-utils.js');
 const KeymapService = require('../services/KeymapService').default;
 const keymapService = KeymapService.instance();
 keymapService.initialize([]);

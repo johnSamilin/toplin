@@ -116,8 +116,8 @@ class AppNavComponent extends Component<Props, State> {
 				style={style}
 			>
 				<NotesScreen visible={notesScreenVisible} />
-					{searchScreenLoaded && <SearchScreen visible={searchScreenVisible} />}
-					{!notesScreenVisible && !searchScreenVisible && <Screen navigation={{ state: route }} themeId={this.props.themeId} dispatch={this.props.dispatch} />}
+				{searchScreenLoaded && <SearchScreen visible={searchScreenVisible} />}
+				{!notesScreenVisible && !searchScreenVisible && <Screen navigation={{ state: route }} themeId={this.props.themeId} dispatch={this.props.dispatch} />}
 				<View style={{ height: this.state.autoCompletionBarExtraHeight }} />
 			</KeyboardAvoidingView>
 		);

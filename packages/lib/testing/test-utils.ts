@@ -18,7 +18,7 @@ import OneDriveApi from '../onedrive-api';
 import SyncTargetOneDrive from '../SyncTargetOneDrive';
 import JoplinDatabase from '../JoplinDatabase';
 import * as fs from 'fs-extra';
-const { DatabaseDriverNode } = require('../database-driver-node');
+const { DatabaseDriverNode } = require('../database-driver-node.js');
 import Folder from '../models/Folder';
 import Note from '../models/Note';
 import ItemChange from '../models/ItemChange';
@@ -31,16 +31,16 @@ import BaseItem from '../models/BaseItem';
 import { FileApi } from '../file-api';
 const FileApiDriverMemory = require('../file-api-driver-memory').default;
 import FileApiDriverLocal from '../file-api-driver-local';
-const { FileApiDriverWebDav } = require('../file-api-driver-webdav');
-const { FileApiDriverDropbox } = require('../file-api-driver-dropbox');
-const { FileApiDriverOneDrive } = require('../file-api-driver-onedrive');
+const { FileApiDriverWebDav } = require('../file-api-driver-webdav.js');
+const { FileApiDriverDropbox } = require('../file-api-driver-dropbox.js');
+const { FileApiDriverOneDrive } = require('../file-api-driver-onedrive.js');
 import SyncTargetRegistry from '../SyncTargetRegistry';
-const SyncTargetMemory = require('../SyncTargetMemory');
+const SyncTargetMemory = require('../SyncTargetMemory.js');
 import SyncTargetFilesystem from '../SyncTargetFilesystem';
-const SyncTargetNextcloud = require('../SyncTargetNextcloud');
-const SyncTargetDropbox = require('../SyncTargetDropbox');
-const SyncTargetAmazonS3 = require('../SyncTargetAmazonS3');
-const SyncTargetWebDAV = require('../SyncTargetWebDAV');
+const SyncTargetNextcloud = require('../SyncTargetNextcloud.js');
+const SyncTargetDropbox = require('../SyncTargetDropbox.js');
+const SyncTargetAmazonS3 = require('../SyncTargetAmazonS3.js');
+const SyncTargetWebDAV = require('../SyncTargetWebDAV.js');
 import SyncTargetJoplinServer from '../SyncTargetJoplinServer';
 import EncryptionService from '../services/e2ee/EncryptionService';
 import DecryptionWorker from '../services/DecryptionWorker';
@@ -65,7 +65,7 @@ import { State as ShareState } from '../services/share/reducer';
 import initLib from '../initLib';
 import OcrDriverTesseract from '../services/ocr/drivers/OcrDriverTesseract';
 import OcrService from '../services/ocr/OcrService';
-import { createWorker } from 'tesseract';
+import { createWorker } from 'tesseract.js';
 import { reg } from '../registry';
 import { Store } from 'redux';
 
@@ -642,7 +642,7 @@ async function initFileApi() {
 
 		mustRunInBand();
 
-		const { parameters, setEnvOverride } = require('../parameters');
+		const { parameters, setEnvOverride } = require('../parameters.js');
 		Setting.setConstant('env', Env.Dev);
 		setEnvOverride('test');
 		const config = parameters().oneDriveTest;
@@ -663,7 +663,7 @@ async function initFileApi() {
 		//
 		// Require it dynamically so that this doesn't break test environments that
 		// aren't configured to do this conversion.
-		const { FileApiDriverAmazonS3 } = require('../file-api-driver-amazon-s3');
+		const { FileApiDriverAmazonS3 } = require('../file-api-driver-amazon-s3.js');
 		const { S3Client } = require('@aws-sdk/client-s3');
 
 		// We make sure for S3 tests run in band because tests

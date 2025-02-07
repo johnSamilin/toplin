@@ -1,6 +1,6 @@
 const stringToStream = require('string-to-stream');
 // const cleanHtml = require('clean-html');
-const resourceUtils = require('./resourceUtils');
+const resourceUtils = require('./resourceUtils.js');
 const { cssValue } = require('./import-enex-md-gen');
 const htmlUtils = require('./htmlUtils').default;
 const Entities = require('html-entities').AllHtmlEntities;

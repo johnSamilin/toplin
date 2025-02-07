@@ -2,7 +2,7 @@ import ShareExtension, { SharedData } from './ShareExtension';
 import shim from '@joplin/lib/shim';
 
 import Note from '@joplin/lib/models/Note';
-import checkPermissions from './checkPermissions';
+import checkPermissions from './checkPermissions.js';
 import NavService from '@joplin/lib/services/NavService';
 const { ToastAndroid } = require('react-native');
 const { PermissionsAndroid } = require('react-native');

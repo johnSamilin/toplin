@@ -5,7 +5,7 @@ import { readFile, stat } from 'fs/promises';
 const os = require('os');
 const { filename } = require('./path-utils');
 import { setupDatabaseAndSynchronizer, switchClient, expectNotThrow, supportDir, expectThrow } from './testing/test-utils';
-const { enexXmlToMd } = require('./import-enex-md-gen');
+const { enexXmlToMd } = require('./import-enex-md-gen.js');
 import importEnex, { ImportOptions } from './import-enex';
 import Note from './models/Note';
 import Tag from './models/Tag';

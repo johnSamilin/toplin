@@ -1,4 +1,4 @@
-const { setupDatabaseAndSynchronizer, sleep, switchClient } = require('./testing/test-utils');
+const { setupDatabaseAndSynchronizer, sleep, switchClient } = require('./testing/test-utils.js');
 const TaskQueue = require('./TaskQueue').default;
 
 describe('TaskQueue', () => {

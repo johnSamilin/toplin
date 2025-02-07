@@ -23,7 +23,7 @@ jest.mock('@electron/remote', () => {
 });
 
 // Import after mocking problematic libraries
-const { afterEachCleanUp, afterAllCleanUp } = require('@joplin/lib/testing/test-utils');
+const { afterEachCleanUp, afterAllCleanUp } = require('@joplin/lib/testing/test-utils.js');
 const React = require('react');
 
 shimInit({ nodeSqlite: sqlite3, React });

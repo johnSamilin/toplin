@@ -1,6 +1,6 @@
 const BaseSyncTarget = require('./BaseSyncTarget').default;
 const Setting = require('./models/Setting').default;
-const { FileApi } = require('./file-api');
+const { FileApi } = require('./file-api.js');
 const FileApiDriverMemory = require('./file-api-driver-memory').default;
 const Synchronizer = require('./Synchronizer').default;
 

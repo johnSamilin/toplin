@@ -1,5 +1,5 @@
 import * as fs from 'fs-extra';
-import { setupDatabaseAndSynchronizer, switchClient, exportDir, supportDir } from '../../testing/test-utils';
+import { setupDatabaseAndSynchronizer, switchClient, exportDir, supportDir } from '../../testing/test-utils.js';
 import InteropService_Exporter_Md from '../../services/interop/InteropService_Exporter_Md';
 import BaseModel from '../../BaseModel';
 import Folder from '../../models/Folder';
@@ -7,11 +7,11 @@ import Resource from '../../models/Resource';
 import Note from '../../models/Note';
 import shim from '../../shim';
 import { MarkupToHtml } from '@joplin/renderer';
-import { NoteEntity, ResourceEntity } from '../database/types';
-import InteropService from './InteropService';
-import { fileExtension } from '../../path-utils';
+import { NoteEntity, ResourceEntity } from '../database/types.js';
+import InteropService from './InteropService.js';
+import { fileExtension } from '../../path-utils.js';
 import { readdir } from 'fs/promises';
-import { ExportModuleOutputFormat } from './types';
+import { ExportModuleOutputFormat } from './types.js';
 
 describe('interop/InteropService_Exporter_Md', () => {
 

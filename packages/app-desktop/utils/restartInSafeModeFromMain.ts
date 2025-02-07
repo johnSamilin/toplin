@@ -17,7 +17,7 @@ const restartInSafeModeFromMain = async () => {
 	Setting.setConstant('appName', appName);
 
 	// Load just enough for us to write a file in the profile directory
-	const { shimInit } = require('@joplin/lib/shim-init-node');
+	const { shimInit } = require('@joplin/lib/shim-init-node.js');
 	shimInit({});
 
 	const startFlags = await processStartFlags(bridge().processArgv());

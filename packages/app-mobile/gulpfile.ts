@@ -50,5 +50,5 @@ gulp.task('build', gulp.series(
 	'buildInjectedJs',
 	'copyWebAssets',
 	'encodeAssets',
-	'podInstall',
+	// 'podInstall',
 ));

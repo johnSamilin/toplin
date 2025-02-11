@@ -60,6 +60,7 @@ const theme: Theme = {
 
 	headerBackgroundColor: '#2D3136',
 	textSelectionColor: '#00AEFF',
+	useNormalization: true,
 };
 
 export default theme;

@@ -19,6 +19,7 @@ export enum EventName {
 	NoteContentChange = 'noteContentChange',
 	OcrServiceResourcesProcessed = 'ocrServiceResourcesProcessed',
 	NoteResourceIndexed = 'noteResourceIndexed',
+	ToggleFullscreen = 'toggleFullscreen',
 }
 
 interface ItemChangeEvent {
@@ -74,6 +75,7 @@ type EventArgs = {
 };
 
 type EventListenerCallbacks = {
+	// @ts-expect-error
 	[n in EventName]: (...args: EventArgs[n])=> void;
 };
 export type EventListenerCallback<Name extends EventName> = EventListenerCallbacks[Name];
@@ -107,7 +109,9 @@ export class EventManager {
 		return this.emitter_.on(eventName, callback);
 	}
 
+	//@ts-expect-error
 	public emit<Name extends EventName>(eventName: Name, ...args: EventArgs[Name]) {
+		//@ts-expect-error
 		return this.emitter_.emit(eventName, ...args);
 	}
 

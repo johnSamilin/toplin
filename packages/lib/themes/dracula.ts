@@ -32,6 +32,7 @@ const theme: Theme = {
 
 	codeMirrorTheme: 'dracula',
 	codeThemeCss: 'atom-one-dark-reasonable.css',
+	useNormalization: true,
 };
 
 export default theme;

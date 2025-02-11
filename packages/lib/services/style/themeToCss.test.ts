@@ -60,6 +60,7 @@ const input: Theme = {
 	headerBackgroundColor: '#ffffff',
 	textSelectionColor: '#a0a0ff',
 	colorBright2: '#ffffff',
+	useNormalization: true,
 };
 
 const expected = `

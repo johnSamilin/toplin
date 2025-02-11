@@ -67,4 +67,14 @@ export interface Theme {
 	headerBackgroundColor: string;
 	textSelectionColor: string;
 	colorBright2: string;
+
+	useNormalization: boolean;
+	//@ts-expect-error
+	extraRawCss?: any;
+	//@ts-expect-error
+	titleTextInput?: any;
+	//@ts-expect-error
+	headerAndTitle?: any;
+	//@ts-expect-error
+	noteHeader?: any;
 }

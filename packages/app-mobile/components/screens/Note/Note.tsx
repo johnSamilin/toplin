@@ -66,6 +66,7 @@ import { AttachFileAction, AttachFileOptions } from './commands/attachFile';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Old code before rule was applied
 const emptyArray: any[] = [];
+const isTablet = true;
 
 const logger = Logger.create('screens/Note');
 
@@ -338,6 +339,12 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 				getMode: () => this.state.mode,
 				setMode: (mode: 'view'|'edit') => {
 					this.setState({ mode });
+					if (mode === 'view') {
+						this.props.dispatch({
+							type: 'SET_EDIT_MODE',
+							payload: false,
+						});
+					}
 				},
 			},
 			commands,
@@ -420,6 +427,10 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 				flex: 1,
 				backgroundColor: theme.backgroundColor,
 			},
+			headerAndTitle: {
+				...theme.headerAndTitle,
+			},
+			noteHeader: theme.noteHeader,
 			bodyTextInput: {
 				flex: 1,
 				paddingLeft: theme.marginLeft,
@@ -486,6 +497,7 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 			fontSize: theme.fontSize,
 			paddingTop: 10, // Added for iOS (Not needed for Android??)
 			paddingBottom: 10, // Added for iOS (Not needed for Android??)
+			...theme.titleTextInput,
 		};
 
 		this.styles_[cacheKey] = StyleSheet.create(styles);
@@ -1543,6 +1555,10 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 				icon: 'create',
 				onPress: () => {
 					this.setState({ mode: 'edit' });
+					this.props.dispatch({
+						type: 'SET_EDIT_MODE',
+						payload: true,
+					})
 
 					this.doFocusUpdate_ = true;
 				},
@@ -1587,8 +1603,8 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 			return <VoiceTypingDialog locale={currentLocale()} onText={this.voiceTypingDialog_onText} onDismiss={this.voiceTypingDialog_onDismiss}/>;
 		};
 
-		return (
-			<View style={this.rootStyle(this.props.themeId).root}>
+		const headerAndTitleComp = <>
+			<View style={isTablet ? this.styles().noteHeader : {}}>
 				<ScreenHeader
 					folderPickerOptions={this.folderPickerOptions()}
 					menuOptions={this.menuOptions()}
@@ -1604,7 +1620,13 @@ class NoteScreenComponent extends BaseScreenComponent<ComponentProps, State> imp
 					onRedoButtonPress={this.screenHeader_redoButtonPress}
 					title={getDisplayParentTitle(this.state.note, this.state.folder)}
 				/>
-				{titleComp}
+				</View>
+			{titleComp}
+		</>;
+
+		return (
+			<View style={this.rootStyle(this.props.themeId).root}>
+				{isTablet ? <View style={this.styles().headerAndTitle}>{headerAndTitleComp}</View> : headerAndTitleComp}
 				{bodyComponent}
 				{renderActionButton()}
 				{renderVoiceTypingDialog()}

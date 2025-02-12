@@ -308,10 +308,10 @@ const SideMenuComponent: React.FC<Props> = props => {
 			{...panResponder.panHandlers}
 		>
 			{menuComponent}
-			<Animated.View style={styles.contentOuterWrapper}>
+			<View style={styles.contentOuterWrapper}>
 				{contentComponent}
-				{closeButtonOverlay}
-			</Animated.View>
+				{!isTablet && closeButtonOverlay}
+			</View>
 		</View>
 	);
 };

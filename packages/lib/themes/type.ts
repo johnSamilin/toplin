@@ -69,12 +69,12 @@ export interface Theme {
 	colorBright2: string;
 
 	useNormalization: boolean;
-	//@ts-expect-error
+	//@ts-ignore
 	extraRawCss?: any;
-	//@ts-expect-error
+	//@ts-ignore
 	titleTextInput?: any;
-	//@ts-expect-error
+	//@ts-ignore
 	headerAndTitle?: any;
-	//@ts-expect-error
+	//@ts-ignore
 	noteHeader?: any;
 }

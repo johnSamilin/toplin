@@ -7,3 +7,5 @@ Key differences are:
 
 - Focus mode
   TBD
+
+If you have any thoughts, I'll be happy to discuss them in telegram: @WatasheeBaka

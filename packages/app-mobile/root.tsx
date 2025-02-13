@@ -141,6 +141,7 @@ import { AppState } from './utils/types';
 import { getDisplayParentId } from '@joplin/lib/services/trash';
 
 const logger = Logger.create('root');
+const isTablet = true;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- Old code before rule was applied
 let storeDispatch: any = function(_action: any) {};
@@ -287,6 +288,13 @@ const appReducer = (state = appDefaultState, action: any) => {
 
 	try {
 		switch (action.type) {
+		case 'SET_EDIT_MODE':
+			newState = {
+				...state,
+				editMode: action.payload,
+				showSideMenu: !action.payload,
+			};
+		break;
 
 		case 'NAV_BACK':
 		case 'NAV_GO':
@@ -318,7 +326,10 @@ const appReducer = (state = appDefaultState, action: any) => {
 					navHistory.splice(0, navHistory.length);
 				}
 
-				newState = { ...state };
+				newState = { ...state, editMode: false };
+				if (isTablet) {
+					newState.showSideMenu = action.routeName !== 'Config';
+				}
 
 				newState.selectedNoteHash = '';
 
@@ -385,8 +396,10 @@ const appReducer = (state = appDefaultState, action: any) => {
 
 		case 'SIDE_MENU_CLOSE':
 
-			newState = { ...state };
-			newState.showSideMenu = false;
+			if (!isTablet) {
+				newState = { ...state };
+				newState.showSideMenu = false;
+			}
 			break;
 
 		case 'SET_PLUGIN_PANELS_DIALOG_VISIBLE':
@@ -1122,7 +1135,7 @@ class AppComponent extends React.Component {
 			return true;
 		}
 
-		if (this.props.showSideMenu) {
+		if (this.props.showSideMenu && !isTablet) {
 			this.props.dispatch({ type: 'SIDE_MENU_CLOSE' });
 			return true;
 		}
@@ -1256,7 +1269,7 @@ class AppComponent extends React.Component {
 		let menuPosition = SideMenuPosition.Left;
 		let disableSideMenuGestures = this.props.disableSideMenuGestures;
 
-		if (this.props.routeName === 'Note') {
+		if (this.props.routeName === 'Note' && !isTablet) {
 			sideMenuContent = <SafeAreaView style={{ flex: 1, backgroundColor: theme.backgroundColor }}><SideMenuContentNote options={this.props.noteSideMenuOptions}/></SafeAreaView>;
 			menuPosition = SideMenuPosition.Right;
 		} else if (this.props.routeName === 'Config') {
@@ -1311,7 +1324,7 @@ class AppComponent extends React.Component {
 					toleranceY={20}
 					openMenuOffset={this.state.sideMenuWidth}
 					menuPosition={menuPosition}
-					onChange={(isOpen: boolean) => this.sideMenu_change(isOpen)}
+					onChange={(isOpen: boolean) => !isTablet && this.sideMenu_change(isOpen)}
 					disableGestures={disableSideMenuGestures}
 				>
 					<StatusBar barStyle={statusBarStyle} />

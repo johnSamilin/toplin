@@ -34,6 +34,7 @@ const theme: Theme = {
 	codeThemeCss: 'atom-one-dark-reasonable.css',
 
 	highlightedColor: '#d3dae3',
+	useNormalization: true,
 };
 
 export default theme;

@@ -78,6 +78,7 @@ const theme: Theme = {
 
 	codeMirrorTheme: 'nord',
 	codeThemeCss: 'atom-one-dark-reasonable.css',
+	useNormalization: true,
 };
 
 export default theme;

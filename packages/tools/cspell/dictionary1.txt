@@ -378,3 +378,7 @@ gumbo
 Guyane
 gvim
 Haïti
+toplin
+toggleFullscreen
+TOPLIN
+Toplin

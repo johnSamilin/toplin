@@ -2,68 +2,68 @@ import { Theme, ThemeAppearance } from './type';
 
 // This is the default theme in Joplin
 const theme: Theme = {
-    appearance: ThemeAppearance.Light,
+	appearance: ThemeAppearance.Light,
 
-    // Color scheme "1" is the basic one, like used to display the note
-    // content. It's basically dark gray text on white background
-    backgroundColor: '#ffffff',
-    backgroundColorTransparent: 'rgba(255,255,255,0.9)',
-    oddBackgroundColor: '#eeeeee',
-    color: '#000', // For regular text
-    colorError: 'red',
-    colorCorrect: 'green', // Opposite of colorError
-    colorWarn: 'rgb(228,86,0)',
-    colorWarnUrl: '#155BDA',
-    colorFaded: '#627184', // For less important text
-    dividerColor: '#dddddd',
-    selectedColor: '#e5e5e5',
-    urlColor: '#155BDA',
+	// Color scheme "1" is the basic one, like used to display the note
+	// content. It's basically dark gray text on white background
+	backgroundColor: '#ffffff',
+	backgroundColorTransparent: 'rgba(255,255,255,0.9)',
+	oddBackgroundColor: '#eeeeee',
+	color: '#000', // For regular text
+	colorError: 'red',
+	colorCorrect: 'green', // Opposite of colorError
+	colorWarn: 'rgb(228,86,0)',
+	colorWarnUrl: '#155BDA',
+	colorFaded: '#627184', // For less important text
+	dividerColor: '#dddddd',
+	selectedColor: '#e5e5e5',
+	urlColor: '#155BDA',
 
-    // Color scheme "2" is used for the sidebar. It's white text over
-    // dark blue background.
-    backgroundColor2: '#fff',
-    color2: '#ffffff',
-    selectedColor2: '#131313',
-    colorError2: '#ff6c6c',
-    colorWarn2: '#ffcb81',
-    colorWarn3: '#ff7626',
+	// Color scheme "2" is used for the sidebar. It's white text over
+	// dark blue background.
+	backgroundColor2: '#fff',
+	color2: '#ffffff',
+	selectedColor2: '#131313',
+	colorError2: '#ff6c6c',
+	colorWarn2: '#ffcb81',
+	colorWarn3: '#ff7626',
 
-    // Color scheme "3" is used for the config screens for example/
-    // It's dark text over gray background.
-    backgroundColor3: '#fff',
-    backgroundColorHover3: '#fff',
-    color3: '#627284',
+	// Color scheme "3" is used for the config screens for example/
+	// It's dark text over gray background.
+	backgroundColor3: '#fff',
+	backgroundColorHover3: '#fff',
+	color3: '#627284',
 
-    // Color scheme "4" is used for secondary-style buttons. It makes a white
-    // button with blue text.
-    backgroundColor4: '#ffffff',
-    color4: '#2D6BDC',
+	// Color scheme "4" is used for secondary-style buttons. It makes a white
+	// button with blue text.
+	backgroundColor4: '#ffffff',
+	color4: '#2D6BDC',
 
-    raisedBackgroundColor: '#e5e5e5',
-    raisedColor: '#222222',
-    searchMarkerBackgroundColor: '#F7D26E',
-    searchMarkerColor: 'black',
+	raisedBackgroundColor: '#e5e5e5',
+	raisedColor: '#222222',
+	searchMarkerBackgroundColor: '#F7D26E',
+	searchMarkerColor: 'black',
 
-    warningBackgroundColor: '#FFD08D',
-    destructiveColor: '#D00707',
+	warningBackgroundColor: '#FFD08D',
+	destructiveColor: '#D00707',
 
-    tableBackgroundColor: 'rgb(247, 247, 247)',
-    codeBackgroundColor: 'rgb(243, 243, 243)',
-    codeBorderColor: 'rgb(220, 220, 220)',
-    codeColor: 'rgb(0,0,0)',
+	tableBackgroundColor: 'rgb(247, 247, 247)',
+	codeBackgroundColor: 'rgb(243, 243, 243)',
+	codeBorderColor: 'rgb(220, 220, 220)',
+	codeColor: 'rgb(0,0,0)',
 
-    blockQuoteOpacity: 0.7,
+	blockQuoteOpacity: 0.7,
 
-    codeMirrorTheme: 'default',
-    codeThemeCss: 'atom-one-light.css',
+	codeMirrorTheme: 'default',
+	codeThemeCss: 'atom-one-light.css',
 
-    headerBackgroundColor: '#F0F0F0',
-    textSelectionColor: '#0096FF',
-    colorBright2: '#000',
+	headerBackgroundColor: '#F0F0F0',
+	textSelectionColor: '#0096FF',
+	colorBright2: '#000',
 
-    useNormalization: false,
-    titleTextInput: {
-        maxWidth: 700,
+	useNormalization: false,
+	titleTextInput: {
+		maxWidth: 700,
 		paddingTop: 10,
 		paddingBottom: 10,
 		marginLeft: 'auto',
@@ -71,24 +71,24 @@ const theme: Theme = {
 		fontFamily: 'Spectral',
 		fontSize: 30,
 		borderBottomWidth: 0,
-    },
-    headerAndTitle: {
-        position: 'relative',
-    },
-    noteHeader: {
-        position: 'absolute',
-        zIndex: 5,
-        right: 0,
-        top: '20%',
-    },
-    extraRawCss: `@import url('https://fonts.googleapis.com/css?family=Spectral|Spectral+SC');
+	},
+	headerAndTitle: {
+		position: 'relative',
+	},
+	noteHeader: {
+		position: 'absolute',
+		zIndex: 5,
+		right: 0,
+		top: '20%',
+	},
+	extraRawCss: `@import url('https://fonts.googleapis.com/css?family=Spectral|Spectral+SC');
 			@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 			#rendered-md, .cm-content {
-				max-width: 700px;
+				max-width: 600px;
 				margin: 0 auto;
 				padding: 0 1.5rem;
-				font-size: 1rem;
+				font-size: auto;
 				font-family: PT Serif, Martel, serif;
 				line-height: 1.75em
 			}
@@ -168,7 +168,7 @@ const theme: Theme = {
 				padding-left: 2rem;
 				padding-right: 2rem;
 				border-left: 5px solid #bdbdbd;
-				font-size: 1.25em;
+				/* font-size: 1.25em; */
 				line-height: 1.75em
 			}
 			#rendered-md hr {

@@ -9,3 +9,10 @@ Key differences are:
   TBD
 
 If you have any thoughts, I'll be happy to discuss them in telegram: @WatasheeBaka
+
+## How does it look?
+### Note editor
+![Снимок1](https://github.com/user-attachments/assets/f7f69560-b3a4-4aba-b9da-64d926bf5e56)
+
+### Rendered note
+![Снимок2](https://github.com/user-attachments/assets/3ac7f265-2481-48d3-8450-f5ee3a84ac2b)
